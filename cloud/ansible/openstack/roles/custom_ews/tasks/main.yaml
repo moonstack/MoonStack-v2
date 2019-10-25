@@ -1,0 +1,13 @@
+- name: Copy ews configuration file
+  template:
+    src: ../templates/ews.cfg
+    dest: /data/ews/conf
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Patching moon.yml with custom ews configuration file
+  lineinfile:
+    path: /opt/moon/etc/moon.yml
+    insertafter: '/opt/ewsposter/ews.ip'
+    line: '     - /data/ews/conf/ews.cfg:/opt/ewsposter/ews.cfg'
