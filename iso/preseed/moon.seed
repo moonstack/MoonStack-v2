@@ -25,7 +25,7 @@ d-i console-setup/detected note
 #########################
 d-i netcfg/choose_interface select auto
 d-i netcfg/dhcp_timeout string 60
-d-i netcfg/get_hostname string t-pot
+d-i netcfg/get_hostname string moonstack
 d-i netcfg/get_domain string
 
 ###############
@@ -60,7 +60,7 @@ d-i partman/confirm_nooverwrite boolean true
 ######################
 d-i passwd/root-login boolean false
 d-i passwd/make-user boolean true
-d-i passwd/user-fullname string tsec
+d-i passwd/user-fullname string msec
 d-i passwd/username string msec
 d-i passwd/user-password-crypted password $1$jAw1TW8v$a2WFamxQJfpPYZmn4qJT71
 d-i user-setup/encrypt-home boolean false

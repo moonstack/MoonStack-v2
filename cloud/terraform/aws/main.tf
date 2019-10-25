@@ -61,6 +61,6 @@ resource "aws_instance" "moon" {
     delete_on_termination = true
   }
   user_data              = "${file("../cloud-init.yaml")}    content: ${base64encode(file("../moon.conf"))}"
-  vpc_security_group_ids = [aws_security_group.tpot.id]
+  vpc_security_group_ids = [aws_security_group.moon.id]
   associate_public_ip_address = true
 }
