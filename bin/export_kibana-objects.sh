@@ -6,7 +6,7 @@ myKIBANA="http://127.0.0.1:64296/"
 myESSTATUS=$(curl -s -XGET ''$myES'_cluster/health' | jq '.' | grep -c green)
 if ! [ "$myESSTATUS" = "1" ]
   then
-    echo "### Elasticsearch is not available, try starting via 'systemctl start MoonStack'."
+    echo "### Elasticsearch is not available, try starting via 'systemctl start moon'."
     exit
   else
     echo "### Elasticsearch is available, now continuing."
