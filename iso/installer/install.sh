@@ -290,8 +290,8 @@ function fuGET_DEPS {
 #      echo "### Automatic mirror selection failed, using main mirror."
 # Point to Debian (Sid, unstable)
 tee /etc/apt/sources.list <<EOF
-deb http://mirrors.ustc.edu.cn/debian unstable main contrib non-free
-deb-src http://mirrors.ustc.edu.cn/debian unstable main contrib non-free
+deb https://mirrors.ustc.edu.cn/debian unstable main contrib non-free
+deb-src https://mirrors.ustc.edu.cn/debian unstable main contrib non-free
 EOF
 #  fi
   echo
